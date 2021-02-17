@@ -27,8 +27,15 @@ persistence_location /tmp/mosquitto/
 # cleansession true
 remote_clientid projects/CONFIG_PROJECT_ID/locations/CONFIG_LOCATION/registries/CONFIG_REGISTRY/devices/CONFIG_DEVICE_ID
 local_clientid projects/CONFIG_PROJECT_ID/locations/CONFIG_LOCATION/registries/CONFIG_REGISTRY/devices/CONFIG_DEVICE_ID
-bind_address 0.0.0.0
+listener 8883
+# bind_address 0.0.0.0
 allow_anonymous true
+
+cafile   /certs/ca.crt
+keyfile  /certs/server.key
+certfile /certs/server.crt
+tls_version tlsv1.2
+
 start_type automatic
 notifications false
 log_type all

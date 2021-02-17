@@ -6,3 +6,8 @@ configMapGenerator:
   files:
   - ./etc-mqtt/roots.pem
   - ./etc-mqtt/bridge.conf.tmpl
+- name: mqtt-certs
+  files:
+  - ./certs/ca.crt
+  - ./certs/server.crt
+  - ./certs/server.key

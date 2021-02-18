@@ -2,7 +2,7 @@
 # This was mostly havested from:
 # http://www.steves-internet-guide.com/mosquitto-tls/
 
-SERVER_IP=35.226.184.19
+SERVER_IP=mqtt-bridge.bascornd.app
 CERTS_DIR=base/certs/
 
 # Clear old ones
@@ -17,9 +17,17 @@ encrypt_key=no
 default_md=sha256
 distinguished_name=req_subj
 prompt=no
+# req_extensions=req_ext
+# x509_extensions=v3_req
+# [req_ext]
+# subjectAltName = @alt_names
+# [v3_req]
+# subjectAltName = @alt_names
+# [alt_names]
+# IP.1=$SERVER_IP
 [req_subj]
 commonName="$SERVER_IP"
-emailAddress=""
+emailAddress="none@none.org"
 countryName=US
 stateOrProvinceName=Wisconsin
 localityName=Milwaukee

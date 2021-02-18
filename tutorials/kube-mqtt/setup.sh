@@ -13,7 +13,7 @@ export REGISTRY=gadgets
 export DEVICE=bridge
 
 # Gen keys for SSL
-gen_keys.sh
+./gen_keys.sh
 
 # Delete existing deployment, we are starting from scratch
 kubectl delete --wait -n default deployment iot-core-bridge
